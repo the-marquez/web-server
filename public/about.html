@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Mí | Web Server</title>
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            background-color: #313244;
+            padding: 2.5rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+            max-width: 650px;
+            width: 100%;
+        }
+        h1 { color: #89b4fa; margin-bottom: 1rem; font-size: 2.2rem; }
+        h2 { color: #f38ba8; margin: 1.5rem 0 0.5rem; font-size: 1.3rem; }
+        p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1rem; }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .skill-tag {
+            background-color: #45475a;
+            color: #a6e3a1;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .btn-back {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 10px 20px;
+            background-color: #89b4fa;
+            color: #1e1e2e;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-back:hover { background-color: #b4befe; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Acerca de Mí</h1>
+        <p>¡Hola! Soy Elmer Leonel Márquez Argueta. Soy un profesional enfocado en el desarrollo de productos Cloud y la ciberseguridad.</p>
+        
+        <p>Trabajo diseñando arquitecturas e implementando soluciones empresariales. Cuando no estoy configurando entornos en Linux, orquestando contenedores, o escribiendo código, probablemente esté recorriendo las montañas de El Salvador en mi motocicleta.</p>
+
+        <h2>Stack Tecnológico</h2>
+        <div class="skills">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">C# / .NET</span>
+            <span class="skill-tag">AWS & Azure</span>
+            <span class="skill-tag">Linux & Bash</span>
+            <span class="skill-tag">Docker</span>
+        </div>
+
+        <a href="/" class="btn-back">← Volver al Inicio</a>
+    </div>
+
+</body>
+</html>

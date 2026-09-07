@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Server</title>
+    
+    <style>
+        /* Reset básico de márgenes */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos del cuerpo de la página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e2e; /* Fondo oscuro */
+            color: #cdd6f4; /* Texto claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+        }
+
+        /* Contenedor tipo tarjeta */
+        .container {
+            background-color: #313244;
+            padding: 2.5rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        /* Estilos del título */
+        h1 {
+            color: #89b4fa; /* Acento azul */
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        /* Estilos de los párrafos */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Estilos del botón */
+        .btn-about {
+            display: inline-block;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            padding: 10px 20px;
+            background-color: #89b4fa;
+            color: #1e1e2e;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-about:hover { 
+            background-color: #b4befe; 
+        }
+
+        /* Sección extra para resaltar las tecnologías */
+        .tech-stack {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #45475a; /* Línea separadora */
+            font-weight: bold;
+            color: #a6e3a1; /* Acento verde */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>¡Bienvenidos a mi Web Server!</h1>
+        <p>Este es un servidor web simple construido con Node y TypeScript.</p>
+        <p>Si estás viendo esta página, significa que tu servidor está levantado y la configuración nativa de Node.js está funcionando a la perfección.</p>
+        
+        <!-- Nuevo botón para ir a /about -->
+        <a href="/about" class="btn-about">Conocer más sobre mí →</a>
+        
+        <div class="tech-stack">
+            🚀 Node.js 24 + TypeScript (Native Watch Mode)
+        </div>
+    </div>
+
+</body>
+</html>

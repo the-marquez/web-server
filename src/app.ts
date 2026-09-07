@@ -1,24 +1,31 @@
 
 import http from "http";
+import fs from "fs";
 
 const server = http.createServer((req, res) => {
 
     console.log({ url: req.url });
 
     if(req.url === "/" && req.method === "GET") {
+
+        const indexHtml = fs.readFileSync("./public/index.html", "utf-8");
+
         res.writeHead(200, { "Content-Type": "text/html" });
-        res.end("<h1>Bienvenidos a mi Web Server!</h1>");
+        res.end(indexHtml);
         return;
     }
     else if(req.url === "/about" && req.method === "GET") {
+
+        const aboutHtml = fs.readFileSync("./public/about.html", "utf-8");
+        
         res.writeHead(200, { "Content-Type": "text/html" });
-        res.end("<h1>Acerca de Nosotros</h1>");
+        res.end(aboutHtml);
         return;
     }
 
+    const notFoundHtml = fs.readFileSync("./public/notfound.html", "utf-8");
     res.writeHead(404, { "Content-Type": "text/html" });
-    res.end("<h1>Pagina No Encontrada!</h1>");
-    res.end();
+    res.end(notFoundHtml);
 
 });
 
