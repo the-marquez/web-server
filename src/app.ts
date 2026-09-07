@@ -12,12 +12,12 @@ const server = http.createServer((req, res) => {
     }
     else if(req.url === "/about" && req.method === "GET") {
         res.writeHead(200, { "Content-Type": "text/html" });
-        res.end("<h1>About Page</h1>");
+        res.end("<h1>Acerca de Nosotros</h1>");
         return;
     }
 
     res.writeHead(404, { "Content-Type": "text/html" });
-    res.end("<h1>Page Not Found</h1>");
+    res.end("<h1>Pagina No Encontrada!</h1>");
     res.end();
 
 });
