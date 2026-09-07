@@ -4,7 +4,7 @@ import fs from "fs";
 
 const server = http.createServer((req, res) => {
 
-    console.log({ url: req.url });
+    console.log(`${req.method} ${req.url}`);
 
     if(req.url === "/" && req.method === "GET") {
 
