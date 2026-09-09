@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Rutas</title>
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .gallery-container {
+            background-color: #313244;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+            max-width: 800px;
+            text-align: center;
+        }
+        h1 {
+            color: #89b4fa;
+            margin-bottom: 2rem;
+        }
+        .photo-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .photo-card {
+            background-color: #1e1e2e;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #45475a;
+        }
+        /* Las imágenes se ajustarán al contenedor */
+        img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+        .caption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #a6adc8;
+        }
+        .link-back {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #89b4fa;
+            text-decoration: none;
+        }
+        .link-back:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="gallery-container">
+        <h1>Galería de Rutas en Moto</h1>
+        
+        <div class="photo-grid">
+            <!-- El navegador hará una petición GET a /moto.jpg -->
+            <div class="photo-card">
+                <img src="/images/calle.png" alt="Mi AKT Adventour 200 en la montaña">
+                <div class="caption">Ruta hacia La Palma</div>
+            </div>
+
+            <!-- El navegador hará una petición GET a /paisaje.png -->
+            <div class="photo-card">
+                <img src="/images/paisaje.png" alt="Paisaje de las montañas">
+                <div class="caption">Mirador del Boquerón</div>
+            </div>
+        </div>
+
+        <a href="/" class="link-back">← Volver al Inicio</a>
+    </div>
+
+</body>
+</html>
