@@ -21,6 +21,30 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.end(aboutHtml);
         return;
+    }else if(req.url === "/custom" && req.method === "GET") {
+        const customHtml = fs.readFileSync("./public/custom.html", "utf-8");
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.end(customHtml);
+        return;
+    }
+
+    if(req.url?.endsWith(".css") && req.method === "GET") {
+        res.writeHead(200, { "Content-Type": "text/css" });
+        const cssFile = fs.readFileSync(`./public${req.url}`, "utf-8");
+        res.end(cssFile);
+        return;
+    }
+    if(req.url?.endsWith(".js") && req.method === "GET") {
+        res.writeHead(200, { "Content-Type": "text/javascript" });
+        const jsFile = fs.readFileSync(`./public${req.url}`, "utf-8");
+        res.end(jsFile);
+        return;
+    }
+    if(req.url?.endsWith(".png") && req.method === "GET") {
+        res.writeHead(200, { "Content-Type": "image/png" });
+        const pngFile = fs.readFileSync(`./public${req.url}`, "utf-8");
+        res.end(pngFile);
+        return;
     }
 
     const notFoundHtml = fs.readFileSync("./public/notfound.html", "utf-8");

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Rutas</title>
+    
+    <!-- El navegador hará una petición GET a /styles.css -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="header">
+            <h1 class="title">Bitácora AKT Adventour 200</h1>
+            <p class="subtitle">Registro de rutas de montaña en El Salvador</p>
+        </header>
+
+        <main class="content">
+            <button id="btn-log" class="btn-primary">Registrar Nueva Ruta</button>
+            <ul id="route-list" class="route-list">
+                <!-- Los items se agregarán dinámicamente con JavaScript -->
+            </ul>
+        </main>
+        
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="/" class="link-back">← Volver al Inicio</a>
+        </div>
+    </div>
+
+    <!-- El navegador hará una petición GET a /custom.js -->
+    <script src="/js/index.js"></script>
+</body>
+</html>
